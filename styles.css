@@ -93,3 +93,15 @@ body {
     font-size: 1.8rem;
     color: #111;
 }
+
+.contact{
+    background-color: #f2f2f2;
+}
+
+i .bi .bi-telephone-inbound-fill{
+    size: 400px;
+}
+
+.footer{
+    background-color: #0A203B;
+}
