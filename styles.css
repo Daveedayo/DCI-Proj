@@ -39,8 +39,8 @@ body {
     color: #FFF200;
 }
 
-.navbar-collapse ul li a {
-    color: #FFF200;
+ul li {
+    color: var(--secondary-color);
 }
 
 .picture{
@@ -104,4 +104,6 @@ i .bi .bi-telephone-inbound-fill{
 
 .footer{
     background-color: #0A203B;
+    color: whitesmoke;
+    color: var(--secondary-color);
 }
