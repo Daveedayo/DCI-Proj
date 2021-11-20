@@ -1,228 +1,386 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>David City Academy Int'l</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-    <nav class="navbar nav-bar navbar-expand-lg navbar-light fixed-top text-warning">
-        <div class="container-xxl">
-          <!-- navbar brand / title -->
-          <a class="navbar-brand brand" href="#">
-            <span>
-              David City Int'l
-            </span>
-          </a>
-          <!-- toggle button for mobile nav -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-           </button>
-    
-          <!-- navbar links -->
-          <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
-            <ul class="navbar-nav text-center">
-              <li class="nav-item">
-                <a class="nav-link" href="#Home">Home</a> 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Books">Books</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Academics
-                </a>
-                <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">  
-                  <li><hr class="dropdown-divider">Academics & Payments</li>
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Davies Adventure
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+  <link href="{% static 'css//aos/aos.css' %}" rel="stylesheet"/>
+ </head>
+ <body>
+  <!--  <nav class="navbar nav-bar navbar-expand-lg fixed-top">
+            <a href="" class="navbar-brand brand">Davies Adventure</a>
+
+            <button class="navbar-toggler" type="button"
+			data-toggle="collapse"
+			data-target="#toggleMobileMenu"
+			aria-controls="#toggleMobileMenu"
+			aria-expanded="false"
+			aria-label="Toggle navigation">
+				<span class="oi oi-menu"><i class="fa fa-bars"></i></span>
+			</button>
+            <div class="collapse navbar-collapse " id="toggleMobileMenu">
+            <ul class="navbar-nav ml-auto text-center ms-auto">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Books</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./services.html" class="nav-link">About Author</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./login.html" class="nav-link">Login</a>
+                </li>	
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Blog">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#About author">About author</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
-              </li>
-              <li>
-                <a href="#login" class="nav-link">Login</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-    </nav>
-
-    <section class="picture opacity-75" style="background-image: url(Assets/hero.jpg);">
-      <div class="container-xxl">
-        <div class="overlay-hero">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-md-12 col-lg-8 text-center">
-              <h2>
-                We Are David City International
-              </h2>
-              <p>We instill knowledge and build focus around the universe</p>
             </div>
-            <div class="button">
-              <a href="#" type="button" class="btn btn-outline-white">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="about-us">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 col-lg-12 text-center mb-3 mt-3">
-            <h2>About Us</h2>
-          </div>
-          <div class="col-md-6 col-lg-6 mt-2">
-            <img src="Assets/davidcity_0EJAo0w.jpg" class="image-fluid" alt="david-city" width="90%" height="80%">
-          </div>
-          <div class="col-lg-6 col-md-6 mt-3">
-            <div class="About-texts text-center">
-              <p>David City International is an enterprise whose aim is to improve the lives of many by being a knowledge advocate. We are known for our transparency either in all our sectors .
-                <br>
-                At david City International we offer only the best.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="services" id="services">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-md-12 text-center">
-            <h2> What do we offer </h2>
-          </div>
-        </div>
 
+        </nav>
+-->
+  <section class="hero" style="background-image: url(img/hero.jpg);">
+   <div class="overlay-hero">
+   </div>
+   <div class="container">
+    <div class="row justify-content-center align-items-center">
+     <div class="col-md-12 col-lg-8 text-center">
+      <h2>
+       Get Started with David City
+      </h2>
+      <p>
+       We instill knowledge and build focus around the universe
+      </p>
+      <div class="buttons">
+       <a class="btn btn-outline-white shadow-none g-btn" href="" type="button">
+        Get Started
+       </a>
+       <a class="btn btn-outline-white shadow-none c-btn" href="" type="button">
+        Contact Us
+       </a>
       </div>
-    </section>
-
-    <section class="Get-started">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-md-12 text-center">
-            <h2>
-              Recent Release
-            </h2>
-          </div>
-        </div>
-        <div class="row justify-content-center mt-5 mb-5">
-        </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="about">
+   <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-md-12 col-lg-12 text-center mb-4">
+      <h2>
+       About Us
+      </h2>
+     </div>
+     <div class="col-md-6 col-lg-6" data-aos="fade-right" data-aos-delay="200">
+      <img alt="" src="{% static 'img/b.jpg' %}" width="100%"/>
+     </div>
+     <div class="col-lg-6 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="about-words">
+       David city academy was founded in the year 5050 by a man name Aare .
+                                He was in turn killed by infinix in the year of the rat after the invasion 
+                                of tzao lao of the western china . During the world war Tzao brao had decided not to listen to whatever was
+                                happening.
       </div>
-    </section>
-
-    <section class="blog">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 col-lg-8 text-center">
-            <h2> Our Blog </h2>
-            <a href="blog">
-              <i class="bi bi-arrow-right">
-              </i>
-            </a>
-          </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-4 col-md-4">
-            <div class="blog-single">
-              <div class="blog-img">
-                <img src="Assets/davidcity_0EJAo0w.jpg" alt="davidcity" width="100%" height="41%">
-              </div>
-              <div class="blog-title">
-                <span>DAVID CITY LAUNCHES NEW WEBSITE</span>
-              </div>
-              <div class="date"> Sept. 21, 2021, 02:30p.m </div>
-              <div class="words">
-                <p>
-                  David city international launches her maiden ve.....
-                </p>
-              </div>
-              <a href="#" class="blog-link"> Learn More </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <div class="blog-single">
-              <div class="blog-img">
-                <img src="Assets/icon-register.png" alt="icon-register" width="100%">
-              </div>
-              <div class="blog-title">
-                <span> Register And Pay For Tutorials </span>
-              </div>
-              <div class="date"> Sept. 23, 2021, 07:59a.m </div> 
-              <div class="words">
-                <p>
-                  David City Academy had earlier announced her op.....
-                </p>
-              </div>
-              <a href="#">Learn More</a>
-            </div> 
-          </div>
-          <div class="col-md-4 col-md-4">
-            <div class="blog-single">
-              <div class="blog-image">
-                <img src="Assets/payment-gate_dMaJgof.jpg" alt="payment" width="100%" height="50%">
-              </div>
-              <div class="blog-title">
-                <span>David City Payment Portal Is Active</span>
-              </div>
-              <div class="date">Sept. 25, 2021, 7:15p.m</div>
-              <div class="words">
-                <p>
-                  David city payment portal is fully functional. .....
-                </p>
-              </div>
-              <a href="#">Learn More</a>
-            </div>
-          </div>
-        </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="services">
+   <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-lg-8 col-md-12 text-center">
+      <h2>
+       What do we offer?
+      </h2>
+     </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+     <div class="col-md-6 col-lg-6 s-c text-center">
+      <div class="s-single">
+       <div class="s-fa">
+        <i class="fa fa-graduation-cap">
+        </i>
+       </div>
+       <div class="s-heading">
+        <h3>
+         Academics
+        </h3>
+       </div>
+       <div class="s-words">
+        <p>
+         At david city academy we do academics work
+        </p>
+       </div>
       </div>
-    </section>
-
-    <section class="contact">
-      <div class="container">
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-12 col-lg-8 text-center">
-            <h2>
-              Our Contact
-            </h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 col-lg-4 text-center">
-            <i class="bi bi-telephone-inbound-fill mt-5"></i>
-            <h2 class="mt-4">Call Us</h2> 
-            <span class="mt-1">+234 813 687 9258</span>
-          </div>
-        </div>
-
+     </div>
+     <div class="col-md-6 col-lg-6 s-c text-center" data-aos="fade-down" data-aos-delay="200">
+      <div class="s-single">
+       <div class="s-fa">
+        <i class="fa fa-book">
+        </i>
+       </div>
+       <div class="s-heading">
+        <h3>
+         Stories
+        </h3>
+       </div>
+       <div class="s-words">
+        <p>
+         At david city academy we do academics work
+        </p>
+       </div>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center mb-5 mt-5">
-            David City International
-          </div>
-        </div>
+     </div>
+     <div>
+      <a class="btn btn-outline-white mt-4 shadow-none s-btn" href="" type="button">
+       Get Started
+      </a>
+      <div class="s-line" data-aos="fade-right" data-aos-delay="200">
       </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>  
-</body>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="services">
+   <div class="container">
+    <div class="row justify-content-center mt-5">
+     <div class="col-md-6 col-lg-6 s-c text-center">
+      <div class="s-single">
+       <div class="s-fa">
+        <i class="fa fa-graduation-cap">
+        </i>
+       </div>
+       <div class="s-heading">
+        <h3>
+         Academics
+        </h3>
+       </div>
+       <div class="s-words">
+        <p>
+         At david city academy we do academics work
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="col-md-6 col-lg-6 s-c text-center" data-aos="fade-down" data-aos-delay="200">
+      <div class="s-single">
+       <div class="s-fa">
+        <i class="fa fa-book">
+        </i>
+       </div>
+       <div class="s-heading">
+        <h3>
+         Stories
+        </h3>
+       </div>
+       <div class="s-words">
+        <p>
+         At david city academy we do academics work
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="book-display">
+   <div class="container">
+    <div class="row justify-content-center">
+     <div class="col lg-8 col-md-12 text-center">
+      <h2>
+       Recent Release
+      </h2>
+     </div>
+    </div>
+    <div class="row justify-content-center mt-5 mb-5">
+     <div <p="" class="col-md-7 col-lg-7 text-center" data="">
+      The journey to the rivers of flowing tears was written by aaron spears
+                            in the year 5090 in the town of sodom and gomorah.
+      <a class="btn btn-outline-white b-btn" href="" type="button">
+       Get e-Book
+      </a>
+     </div>
+     <div class="col-md-5 col-lg-5" data-aos="fade-up" data-aos-delay="200">
+      <div class="b-img">
+       <img alt="" src="{% static 'img/b.jpg' %}" width="100%"/>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="blog">
+   <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-md-12 col-lg-8 text-center" data-aos-delay="200">
+      <h2>
+       Our Blog
+      </h2>
+      <a class="pull-right" href="">
+       <i class="fa fa-arrow-right">
+       </i>
+       Blog
+      </a>
+     </div>
+    </div>
+    nt-center mt-5"&gt;
+    <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
+     <div class="blog-single">
+      <div class="b-img">
+       <img alt="" src="{% static 'img/hero.jpg' %}" width="100%"/>
+      </div>
+      <div class="b-title">
+       <span>
+        This is a ball
+       </span>
+      </div>
+      <div class="date">
+       10 december
+      </div>
+      <div class="words">
+       <p>
+        Lorem ipsum dolor sit amet, rembe adipiscing elite.
+                                 Inwege maximus ligula semper metusere pellentesque mattis. Maecenas volutpat, diam enime vol
+       </p>
+      </div>
+      <a class="b-link" href="">
+       Learn More
+      </a>
+     </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+     <div class="blog-single">
+      <div class="b-img">
+       <img alt="" src="{% static 'img/hero.jpg' %}" width="100%"/>
+      </div>
+      <div class="b-title">
+       <span>
+        This is a ball
+       </span>
+      </div>
+      <div class="date">
+       10 december
+      </div>
+      <div class="words">
+       <p>
+        Lorem ipsum dolor sit amet, rembe adipiscing elite.
+                                 Inwege maximus ligula semper metusere pellentesque mattis. Maecenas volutpat, diam enime vol
+       </p>
+      </div>
+      <a class="b-link" href="">
+       Learn More
+      </a>
+     </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+     <div class="blog-single">
+      <div class="b-img">
+       <img alt="" src="{% static 'img/hero.jpg' %}" width="100%"/>
+      </div>
+      <div class="b-title">
+       <span>
+        This is a ball
+       </span>
+      </div>
+      <div class="date">
+       <span>
+        10 december
+       </span>
+      </div>
+      <div class="words">
+       <p>
+        Lorem ipsum dolor sit amet, rembe adipiscing elite.
+                                 Inwege maximus ligula semper metusere pellentesque mattis. Maecenas volutpat, diam enime vol
+       </p>
+      </div>
+      <a class="b-link" href="">
+       Learn More
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="contact">
+   <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-md-12 col-lg-8 text-center">
+      <h2>
+       Our Contact
+      </h2>
+     </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+     <div class="col-md-4 col-lg-4 text-center" data-aos="fade-right" data-aos-delay="200">
+      <div class="c-icon">
+       <i class="fa fa-phone">
+       </i>
+       <h3 class="mt-3">
+        Call us
+       </h3>
+       <span>
+        +234 654 873 42
+       </span>
+      </div>
+     </div>
+     <div class="col-md-4 col-lg-4 text-center" data-aos="fade-up" data-aos-delay="250">
+      <div class="c-icon">
+       <i class="fa fa-map">
+       </i>
+       <h3 class="mt-3">
+        Visit us
+       </h3>
+       <span>
+        Ogbede Villa , Iyin-Ekiti
+       </span>
+      </div>
+     </div>
+     <div class="col-md-4 col-lg-4 text-center" data-aos="fade-up" data-aos-delay="200">
+      <div class="c-icon">
+       <i class="fa fa-fax">
+       </i>
+       <h3 class="mt-3">
+        Mail us
+       </h3>
+       <span>
+        ajakanika@mailing.com
+       </span>
+      </div>
+     </div>
+     <a class="btn c-btn btn-outline-white shadow-none mt-5" href="" type="buttton">
+      Talk To Us Directly
+      <span class="fa fa-arrow-right">
+      </span>
+     </a>
+    </div>
+   </div>
+  </section>
+  <section class="footer">
+   <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-lg-12 text-center mb-5 mt-5">
+      Â© David City International 2021.
+     </div>
+    </div>
+   </div>
+  </section>
+  <script src="{% static 'js/jquery.min.js' %}">
+  </script>
+  <script src="{% static 'css//aos/aos.js' %}">
+  </script>
+  <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}">
+  </script>
+  <script src="{% static 'js/bootstrap.min.js' %}">
+  </script>
+ </body>
 </html>
-
-<i class="bi bi-telephone-inbound-fill"></i>
-<i class="bi bi-envelope-fill"></i>
-<i class="bi bi-house-fill"></i>
